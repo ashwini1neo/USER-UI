@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-light btn-warning" ><div class="form-group mx-sm-3 mb-2">
+    <input type="text" class="form-control" [(ngModel)]= "name" id="name" (input)= "serachByName()" placeholder="Serach by name">
+   </div>
+   <div class="form-group mx-sm-3 mb-2">
+    <input type="text" class="form-control" [(ngModel)]= "surname" id="surname" (input)= "serachBySurname()" id="lastname" placeholder="Serach bylastname ">
+   </div>
+   <div class="form-group mx-sm-3 mb-2">
+    <input type="text" class="form-control" [(ngModel)]= "pincode" id="pincode" (input)= "serachBypincode()" id="pin" placeholder="Serach by pin">
+   </div></nav>
+<table border="1" align="center"  class="table table-striped table-dark">
+     <thead class="table-success"> 
+    <tr>
+        <th>NO.</th>
+        <th>EMP ID</th>
+        <th>NAME</th>
+        <th>SURNAME</th>
+        <th>MOBILE</th>
+        <th>PIN</th>
+        <th>ADDRESS</th>
+        <th>USERNAME</th>
+        <th>ACTION</th>
+    </tr>
+ </thead> 
+
+    <tr *ngFor="let user of users; let i =index">
+        <td>{{i+1}}</td>
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.surname}}</td>
+        <td>{{user.mobile}}</td>
+        <td>{{user.pincode}}</td>
+        <td>{{user.address}}</td>
+        <td>{{user.userName}}</td>
+        <td><button type="button" class="btn btn-danger" (click)="deleteUser(user.id)">DELETE</button>|
+            <button type="button" class="btn btn-success" (click)=" showUpdatePage(user.id)">UPDATE</button></td>
+    </tr>
+
+</table>
+
+{{message}}

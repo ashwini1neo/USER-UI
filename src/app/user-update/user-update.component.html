@@ -1,0 +1,75 @@
+<div class="jumbotron">
+    <form action="#" (ngSubmit)='updateUser()' method="PUT">
+        <input type="hidden" id="id" name="id" name="id" [(ngModel)]="user.id">
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="user.name"
+                    placeholder="Please enter name">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Surname</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="surname" id="surname" [(ngModel)]="user.surname"
+                    placeholder="Please enter surname">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="email" name="email" [(ngModel)]="user.email"
+                    placeholder="Please enter email">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Mobile</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="mobile" name="mobile" [(ngModel)]="user.mobile"
+                    placeholder="Please enter mobile">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Adress</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="address" name="address" [(ngModel)]="user.address"
+                    placeholder="Please enter adress">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Pin</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="pin" name="pincode" [(ngModel)]="user.pincode"
+                    placeholder="Please enter pin">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Username</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="username" name="userName" [(ngModel)]="user.userName"
+                    placeholder="Please enter USername">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="password" name="paZZword" [(ngModel)]="user.paZZword" #passsword=ngModel
+                    placeholder="Please enter password">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"></label>
+
+            <div class="col-sm-1">
+                <button type="submit" class="btn btn-success">Submit</button>
+
+            </div>
+           
+
+        </div>
+
+
+    </form>
+    <!-- {{message}} -->
+</div>
